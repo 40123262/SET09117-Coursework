@@ -1,4 +1,7 @@
-﻿  Player.cpp
+﻿  stdafx.cpp
+  Player.cpp
+  Draughts.cpp
+  Checker.cpp
   Board.cpp
   Generating Code...
   Draughts.vcxproj -> C:\Users\janme\source\repos\Draughts\Debug\Draughts.exe

@@ -36,15 +36,15 @@ public:
 		{
 			if (!hasToKill && (!gameBoard->IsFieldEmpty(from_col, from_row) && gameBoard->IsFieldEmpty(to_col, to_row)) && abs(from_col - to_col) == 1 && (from_row - to_row) == 1)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(White, to_col - 65, to_row - 1);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(White);
 				done = true;
 			}
 			else if ((!gameBoard->IsFieldEmpty(from_col, from_row) && ((gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == Black) || (gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == BlackQueen)) && gameBoard->IsFieldEmpty(to_col, to_row)) && std::abs(from_col - to_col) == 2 && std::abs(from_row - to_row) == 2)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(White, to_col - 65, to_row - 1);
-				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty, ((from_col - 65) + (to_col - 65)) / 2, ((from_row - 1) + (to_row - 1)) / 2);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(White);
+				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty);
 				score++;
 				if (gameBoard->CanKill(to_col, to_row))
 				{		
@@ -66,15 +66,15 @@ public:
 		{
 			if (!hasToKill &&(!gameBoard->IsFieldEmpty(from_col, from_row) && gameBoard->IsFieldEmpty(to_col, to_row)) && abs(from_col - to_col) == 1 && (to_row - from_row)  == 1)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(Black, to_col - 65, to_row - 1);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(Black);
 				done = true;
 			}
 			else if((!gameBoard->IsFieldEmpty(from_col, from_row) && ((gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == White) || (gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == WhiteQueen)) && gameBoard->IsFieldEmpty(to_col, to_row)) && std::abs(to_col - from_col) == 2 && std::abs(to_row - from_row) == 2)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(Black, to_col - 65, to_row - 1);
-				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty, ((from_col - 65) + (to_col - 65)) / 2, ((from_row - 1) + (to_row - 1)) / 2);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(Black);
+				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty);
 				score++;
 				if (gameBoard->CanKill(to_col, to_row))
 				{
@@ -97,15 +97,15 @@ public:
 
 			if (!hasToKill && !gameBoard->IsFieldEmpty(from_col, from_row) && gameBoard->IsFieldEmpty(to_col, to_row) && abs(to_col - from_col) == 1 && abs(from_row - to_row) == 1)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(WhiteQueen, to_col - 65, to_row - 1);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(WhiteQueen);
 				done = true;
 			}
 			else if ((!gameBoard->IsFieldEmpty(from_col, from_row) && ((gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == Black) || (gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == BlackQueen)) && gameBoard->IsFieldEmpty(to_col, to_row)) && std::abs(from_col - to_col) == 2 && std::abs(from_row - to_row) == 2)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(WhiteQueen, to_col - 65, to_row - 1);
-				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty, ((from_col - 65) + (to_col - 65)) / 2, ((from_row - 1) + (to_row - 1)) / 2);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(WhiteQueen);
+				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty);
 				score++;
 				if (gameBoard->CanKill(to_col, to_row))
 				{
@@ -127,15 +127,15 @@ public:
 		{
 			if (!hasToKill && !gameBoard->IsFieldEmpty(from_col, from_row) && gameBoard->IsFieldEmpty(to_col, to_row) && abs(from_col - to_col) == 1 && abs(from_row - to_row) == 1)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(BlackQueen, to_col - 65, to_row - 1);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(BlackQueen);
 				done = true;
 			}
 			else if ((!gameBoard->IsFieldEmpty(from_col, from_row) && ((gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == White) || (gameBoard->FieldColour((from_col + to_col) / 2, (from_row + to_row) / 2) == WhiteQueen)) && gameBoard->IsFieldEmpty(to_col, to_row)) && std::abs(from_col - to_col) == 2 && std::abs(from_row - to_row) == 2)
 			{
-				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty, from_col - 65, from_row);
-				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(BlackQueen, to_col - 65, to_row - 1);
-				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty, ((from_col - 65) + (to_col - 65)) / 2, ((from_row - 1) + (to_row - 1)) / 2);
+				gameBoard->currentState[from_col - 65][from_row - 1] = Checker(Empty);
+				gameBoard->currentState[to_col - 65][to_row - 1] = Checker(BlackQueen);
+				gameBoard->currentState[((from_col - 65) + (to_col - 65)) / 2][((from_row - 1) + (to_row - 1)) / 2] = Checker(Empty);
 				score++;
 				if (gameBoard->CanKill(to_col, to_row))
 				{
@@ -171,9 +171,9 @@ public:
 		}
 		if ((gameBoard->FieldColour(col - 1, row - 1) == enemy || gameBoard->FieldColour(col - 1, row - 1) == enemyQueen) && (gameBoard->FieldColour(col - 2, row - 2) == Empty))
 		{
-			gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-			gameBoard->currentState[col - 67][row - 3] = Checker(colour, col - 67, row - 3);
-			gameBoard->currentState[((col - 65) + (col - 67)) / 2][((row - 1) + (row - 3)) / 2] = Checker(Empty, ((col - 65) + (col - 67)) / 2, ((row - 1) + (row - 3)) / 2);
+			gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+			gameBoard->currentState[col - 67][row - 3] = Checker(colour);
+			gameBoard->currentState[((col - 65) + (col - 67)) / 2][((row - 1) + (row - 3)) / 2] = Checker(Empty);
 			score++;
 			if (gameBoard->CanKill(col-2, row-2))
 			{
@@ -188,9 +188,9 @@ public:
 		}
 		if ((gameBoard->FieldColour(col + 1, row - 1) == enemy || gameBoard->FieldColour(col + 1, row - 1) == enemyQueen) && (gameBoard->FieldColour(col + 2, row - 2) == Empty))
 		{
-			gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-			gameBoard->currentState[col - 63][row - 3] = Checker(colour, col - 63, row - 3);
-			gameBoard->currentState[((col - 65) + (col - 63)) / 2][((row - 1) + (row - 3)) / 2] = Checker(Empty, ((col - 65) + (col - 63)) / 2, ((row - 1) + (row - 3)) / 2);
+			gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+			gameBoard->currentState[col - 63][row - 3] = Checker(colour);
+			gameBoard->currentState[((col - 65) + (col - 63)) / 2][((row - 1) + (row - 3)) / 2] = Checker(Empty);
 			score++;
 			if (gameBoard->CanKill(col + 2, row - 2))
 			{
@@ -205,9 +205,9 @@ public:
 		}
 		if ((gameBoard->FieldColour(col + 1, row + 1) == enemy || gameBoard->FieldColour(col + 1, row + 1) == enemyQueen) && (gameBoard->FieldColour(col + 2, row + 2) == Empty))
 		{
-			gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-			gameBoard->currentState[col - 63][row + 1] = Checker(colour, col - 63, row + 1);
-			gameBoard->currentState[((col - 65) + (col - 63)) / 2][((row - 1) + (row + 1)) / 2] = Checker(Empty, ((col - 65) + (col - 63)) / 2, ((row - 1) + (row + 1)) / 2);
+			gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+			gameBoard->currentState[col - 63][row + 1] = Checker(colour);
+			gameBoard->currentState[((col - 65) + (col - 63)) / 2][((row - 1) + (row + 1)) / 2] = Checker(Empty);
 			score++;
 			if (gameBoard->CanKill(col + 2, row + 2))
 			{
@@ -222,9 +222,9 @@ public:
 		}
 		if ((gameBoard->FieldColour(col - 1, row + 1) == enemy || gameBoard->FieldColour(col - 1, row + 1) == enemyQueen) && (gameBoard->FieldColour(col - 2, row + 2) == Empty))
 		{
-			gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-			gameBoard->currentState[col - 67][row + 1] = Checker(colour, col - 67, row + 1);
-			gameBoard->currentState[((col - 65) + (col - 67)) / 2][((row - 1) + (row + 1)) / 2] = Checker(Empty, ((col - 65) + (col - 67)) / 2, ((row - 1) + (row + 1)) / 2);
+			gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+			gameBoard->currentState[col - 67][row + 1] = Checker(colour);
+			gameBoard->currentState[((col - 65) + (col - 67)) / 2][((row - 1) + (row + 1)) / 2] = Checker(Empty);
 			score++;
 			if (gameBoard->CanKill(col - 2, row + 2))
 			{
@@ -244,16 +244,16 @@ public:
 		{
 			if (gameBoard->FieldColour(col + 1, row + 1) == Empty && !gameBoard->CanBeKilled(col + 1, row + 1, Black))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row + 0] = Checker(Black, col - 64, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row + 0] = Checker(Black);
 				done = true;
 				return true;
 				
 			}
 			else if (gameBoard->FieldColour(col - 1, row + 1) == Empty && !gameBoard->CanBeKilled(col - 1, row + 1, Black))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row + 0] = Checker(Black, col - 66, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row + 0] = Checker(Black);
 				done = true;
 				return true;
 			}
@@ -262,15 +262,15 @@ public:
 		{
 			if (gameBoard->FieldColour(col - 1, row - 1) == Empty && !gameBoard->CanBeKilled(col - 1, row - 1, White))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row - 2] = Checker(White, col - 66, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row - 2] = Checker(White);
 				done = true;
 				return true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row - 1) == Empty && !gameBoard->CanBeKilled(col + 1, row - 1, White))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row - 2] = Checker(White, col - 64, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row - 2] = Checker(White);
 				done = true;
 				return true;
 			}
@@ -279,29 +279,29 @@ public:
 		{
 			if (gameBoard->FieldColour(col - 1, row - 1) == Empty && !gameBoard->CanBeKilled(col - 1, row - 1, Black))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row - 2] = Checker(BlackQueen, col - 66, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row - 2] = Checker(BlackQueen);
 				done = true;
 				return true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row - 1) == Empty && !gameBoard->CanBeKilled(col + 1, row - 1, Black))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row - 2] = Checker(BlackQueen, col - 64, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row - 2] = Checker(BlackQueen);
 				done = true;
 				return true;
 			}
 			else if (gameBoard->FieldColour(col - 1, row + 1) == Empty && !gameBoard->CanBeKilled(col - 1, row + 1, Black))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row + 0] = Checker(BlackQueen, col - 66, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row + 0] = Checker(BlackQueen);
 				done = true;
 				return true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row + 1) == Empty && !gameBoard->CanBeKilled(col + 1, row + 1, Black))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row + 0] = Checker(BlackQueen, col - 64, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row + 0] = Checker(BlackQueen);
 				done = true;
 				return true;
 			}
@@ -310,29 +310,29 @@ public:
 		{
 			if (gameBoard->FieldColour(col + 1, row + 1) == Empty && !gameBoard->CanBeKilled(col + 1, row + 1, White))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row + 0] = Checker(WhiteQueen, col - 64, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row + 0] = Checker(WhiteQueen);
 				done = true;
 				return true;
 			}
 			else if (gameBoard->FieldColour(col - 1, row + 1) == Empty && !gameBoard->CanBeKilled(col - 1, row + 1, White))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row + 0] = Checker(WhiteQueen, col - 66, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row + 0] = Checker(WhiteQueen);
 				done = true;
 				return true;
 			}
 			else if (gameBoard->FieldColour(col - 1, row - 1) == Empty && !gameBoard->CanBeKilled(col - 1, row - 1, White))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row - 2] = Checker(WhiteQueen, col - 66, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row - 2] = Checker(WhiteQueen);
 				done = true;
 				return true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row - 1) == Empty && !gameBoard->CanBeKilled(col + 1, row - 1, White))
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row - 2] = Checker(WhiteQueen, col - 64, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row - 2] = Checker(WhiteQueen);
 				done = true;
 				return true;
 			}
@@ -347,14 +347,14 @@ public:
 		{
 			 if (gameBoard->FieldColour(col  +1, row + 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row + 0] = Checker(Black, col - 64, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row + 0] = Checker(Black);
 				done = true;
 			}
 			else if (gameBoard->FieldColour(col - 1, row + 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row + 0] = Checker(Black, col - 66, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row + 0] = Checker(Black);
 				done = true;
 			}
 		}
@@ -362,14 +362,14 @@ public:
 		{
 		    if (gameBoard->FieldColour(col - 1, row - 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row - 2] = Checker(White, col - 66, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row - 2] = Checker(White);
 				done = true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row - 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row - 2] = Checker(White, col - 64, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row - 2] = Checker(White);
 				done = true;
 			}
 		}
@@ -377,26 +377,26 @@ public:
 		{
 			if (gameBoard->FieldColour(col - 1, row - 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row - 2] = Checker(BlackQueen, col - 66, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row - 2] = Checker(BlackQueen);
 				done = true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row - 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row - 2] = Checker(BlackQueen, col - 64, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row - 2] = Checker(BlackQueen);
 				done = true;
 			}
 			else if (gameBoard->FieldColour(col - 1, row + 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row + 0] = Checker(BlackQueen, col - 66, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row + 0] = Checker(BlackQueen);
 				done = true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row + 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row + 0] = Checker(BlackQueen, col - 64, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row + 0] = Checker(BlackQueen);
 				done = true;
 			}
 		}
@@ -404,25 +404,25 @@ public:
 		{
 			if (gameBoard->FieldColour(col + 1, row + 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row + 0] = Checker(WhiteQueen, col - 64, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row + 0] = Checker(WhiteQueen);
 				done = true;
 			}else if (gameBoard->FieldColour(col - 1, row + 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row + 0] = Checker(WhiteQueen, col - 66, row + 0);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row + 0] = Checker(WhiteQueen);
 				done = true;
 			}
 			else if (gameBoard->FieldColour(col - 1, row - 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 66][row - 2] = Checker(WhiteQueen, col - 66, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 66][row - 2] = Checker(WhiteQueen);
 				done = true;
 			}
 			else if (gameBoard->FieldColour(col + 1, row - 1) == Empty)
 			{
-				gameBoard->currentState[col - 65][row - 1] = Checker(Empty, col - 65, row);
-				gameBoard->currentState[col - 64][row - 2] = Checker(WhiteQueen, col - 64, row - 2);
+				gameBoard->currentState[col - 65][row - 1] = Checker(Empty);
+				gameBoard->currentState[col - 64][row - 2] = Checker(WhiteQueen);
 				done = true;
 			}
 		}

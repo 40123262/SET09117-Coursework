@@ -92,77 +92,77 @@ bool Board::CanKill(char col, char row)
 }
 void Board::ResetBoard()
 {
-	currentState[A][0] = Checker(Empty, A, 1);
-	currentState[B][0] = Checker(Black, B, 1);
-	currentState[C][0] = Checker(Empty, C, 1);
-	currentState[D][0] = Checker(Black, D, 1);
-	currentState[E][0] = Checker(Empty, E, 1);
-	currentState[F][0] = Checker(Black, F, 1);
-	currentState[G][0] = Checker(Empty, G, 1);
-	currentState[H][0] = Checker(Black, H, 1);
+	currentState[A][0] = Checker(Empty);
+	currentState[B][0] = Checker(Black);
+	currentState[C][0] = Checker(Empty);
+	currentState[D][0] = Checker(Black);
+	currentState[E][0] = Checker(Empty);
+	currentState[F][0] = Checker(Black);
+	currentState[G][0] = Checker(Empty);
+	currentState[H][0] = Checker(Black);
 
-	currentState[A][1] = Checker(Black, A, 2);
-	currentState[B][1] = Checker(Empty, B, 2);
-	currentState[C][1] = Checker(Black, C, 2);
-	currentState[D][1] = Checker(Empty, D, 2);
-	currentState[E][1] = Checker(Black, E, 2);
-	currentState[F][1] = Checker(Empty, F, 2);
-	currentState[G][1] = Checker(Black, G, 2);
-	currentState[H][1] = Checker(Empty, H, 2);
+	currentState[A][1] = Checker(Black);
+	currentState[B][1] = Checker(Empty);
+	currentState[C][1] = Checker(Black);
+	currentState[D][1] = Checker(Empty);
+	currentState[E][1] = Checker(Black);
+	currentState[F][1] = Checker(Empty);
+	currentState[G][1] = Checker(Black);
+	currentState[H][1] = Checker(Empty);
 
-	currentState[A][2] = Checker(Empty, A, 3);
-	currentState[B][2] = Checker(Black, B, 3);
-	currentState[C][2] = Checker(Empty, C, 3);
-	currentState[D][2] = Checker(Black, D, 3);
-	currentState[E][2] = Checker(Empty, E, 3);
-	currentState[F][2] = Checker(Black, F, 3);
-	currentState[G][2] = Checker(Empty, G, 3);
-	currentState[H][2] = Checker(Black, H, 3);
+	currentState[A][2] = Checker(Empty);
+	currentState[B][2] = Checker(Black);
+	currentState[C][2] = Checker(Empty);
+	currentState[D][2] = Checker(Black);
+	currentState[E][2] = Checker(Empty);
+	currentState[F][2] = Checker(Black);
+	currentState[G][2] = Checker(Empty);
+	currentState[H][2] = Checker(Black);
 
-	currentState[A][3] = Checker(Empty, A, 4);
-	currentState[B][3] = Checker(Empty, B, 4);
-	currentState[C][3] = Checker(Empty, C, 4);
-	currentState[D][3] = Checker(Empty, D, 4);
-	currentState[E][3] = Checker(Empty, E, 4);
-	currentState[F][3] = Checker(Empty, F, 4);
-	currentState[G][3] = Checker(Empty, G, 4);
-	currentState[H][3] = Checker(Empty, H, 4);
+	currentState[A][3] = Checker(Empty);
+	currentState[B][3] = Checker(Empty);
+	currentState[C][3] = Checker(Empty);
+	currentState[D][3] = Checker(Empty);
+	currentState[E][3] = Checker(Empty);
+	currentState[F][3] = Checker(Empty);
+	currentState[G][3] = Checker(Empty);
+	currentState[H][3] = Checker(Empty);
 
-	currentState[A][4] = Checker(Empty, A, 5);
-	currentState[B][4] = Checker(Empty, B, 5);
-	currentState[C][4] = Checker(Empty, C, 5);
-	currentState[D][4] = Checker(Empty, D, 5);
-	currentState[E][4] = Checker(Empty, E, 5);
-	currentState[F][4] = Checker(Empty, F, 5);
-	currentState[G][4] = Checker(Empty, G, 5);
-	currentState[H][4] = Checker(Empty, H, 5);
+	currentState[A][4] = Checker(Empty);
+	currentState[B][4] = Checker(Empty);
+	currentState[C][4] = Checker(Empty);
+	currentState[D][4] = Checker(Empty);
+	currentState[E][4] = Checker(Empty);
+	currentState[F][4] = Checker(Empty);
+	currentState[G][4] = Checker(Empty);
+	currentState[H][4] = Checker(Empty);
 
-	currentState[A][5] = Checker(White, A, 6);
-	currentState[B][5] = Checker(Empty, B, 6);
-	currentState[C][5] = Checker(White, C, 6);
-	currentState[D][5] = Checker(Empty, D, 6);
-	currentState[E][5] = Checker(White, E, 6);
-	currentState[F][5] = Checker(Empty, F, 6);
-	currentState[G][5] = Checker(White, G, 6);
-	currentState[H][5] = Checker(Empty, H, 6);
+	currentState[A][5] = Checker(White);
+	currentState[B][5] = Checker(Empty);
+	currentState[C][5] = Checker(White);
+	currentState[D][5] = Checker(Empty);
+	currentState[E][5] = Checker(White);
+	currentState[F][5] = Checker(Empty);
+	currentState[G][5] = Checker(White);
+	currentState[H][5] = Checker(Empty);
 
-	currentState[A][6] = Checker(Empty, A, 7);
-	currentState[B][6] = Checker(White, B, 7);
-	currentState[C][6] = Checker(Empty, C, 7);
-	currentState[D][6] = Checker(White, D, 7);
-	currentState[E][6] = Checker(Empty, E, 7);
-	currentState[F][6] = Checker(White, F, 7);
-	currentState[G][6] = Checker(Empty, G, 7);
-	currentState[H][6] = Checker(White, H, 7);
+	currentState[A][6] = Checker(Empty);
+	currentState[B][6] = Checker(White);
+	currentState[C][6] = Checker(Empty);
+	currentState[D][6] = Checker(White);
+	currentState[E][6] = Checker(Empty);
+	currentState[F][6] = Checker(White);
+	currentState[G][6] = Checker(Empty);
+	currentState[H][6] = Checker(White);
 
-	currentState[A][7] = Checker(White, A, 8);
-	currentState[B][7] = Checker(Empty, B, 8);
-	currentState[C][7] = Checker(White, C, 8);
-	currentState[D][7] = Checker(Empty, D, 8);
-	currentState[E][7] = Checker(White, E, 8);
-	currentState[F][7] = Checker(Empty, F, 8);
-	currentState[G][7] = Checker(White, G, 8);
-	currentState[H][7] = Checker(Empty, H, 8);
+	currentState[A][7] = Checker(White);
+	currentState[B][7] = Checker(Empty);
+	currentState[C][7] = Checker(White);
+	currentState[D][7] = Checker(Empty);
+	currentState[E][7] = Checker(White);
+	currentState[F][7] = Checker(Empty);
+	currentState[G][7] = Checker(White);
+	currentState[H][7] = Checker(Empty);
 }
 bool Board::IsFieldEmpty(char col, char row) 
 {
@@ -176,9 +176,9 @@ void Board::Draw()
 	for (int i = 0; i < 8; i++)
 	{
 		if (FieldColour(i + 65, 1) == White)
-			currentState[i][0] = Checker(WhiteQueen, (char)(i + 65), 1);
+			currentState[i][0] = Checker(WhiteQueen);
 		if (FieldColour(i + 65, 8) == Black)
-			currentState[i][7] = Checker(BlackQueen, (char)(i + 65), 8);
+			currentState[i][7] = Checker(BlackQueen);
 	}
 	int k = 240;
 	SetConsoleTextAttribute(hConsole, 15);
