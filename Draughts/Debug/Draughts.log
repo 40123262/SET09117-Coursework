@@ -1,8 +1,3 @@
-﻿  stdafx.cpp
-  Player.cpp
-  Draughts.cpp
-  Checker.cpp
-  Board.cpp
-  Generating Code...
+﻿  Board.cpp
   Draughts.vcxproj -> C:\Users\janme\source\repos\Draughts\Debug\Draughts.exe
   Draughts.vcxproj -> C:\Users\janme\source\repos\Draughts\Debug\Draughts.pdb (Partial PDB)

@@ -1,1 +1,10 @@
-﻿
+﻿  stdafx.cpp
+  Board.cpp
+  Checker.cpp
+  Draughts.cpp
+  Player.cpp
+  Generating code
+  All 161 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Draughts.vcxproj -> C:\Users\janme\source\repos\Draughts\Release\Draughts.exe
+  Draughts.vcxproj -> C:\Users\janme\source\repos\Draughts\Release\Draughts.pdb (Full PDB)

@@ -105,7 +105,7 @@ void Board::ResetBoard()
 	currentState[B][1] = Checker(Empty);
 	currentState[C][1] = Checker(Black);
 	currentState[D][1] = Checker(Empty);
-	currentState[E][1] = Checker(Black);
+	currentState[E][1] = Checker(Empty);
 	currentState[F][1] = Checker(Empty);
 	currentState[G][1] = Checker(Black);
 	currentState[H][1] = Checker(Empty);
@@ -121,7 +121,7 @@ void Board::ResetBoard()
 
 	currentState[A][3] = Checker(Empty);
 	currentState[B][3] = Checker(Empty);
-	currentState[C][3] = Checker(Empty);
+	currentState[C][3] = Checker(White);
 	currentState[D][3] = Checker(Empty);
 	currentState[E][3] = Checker(Empty);
 	currentState[F][3] = Checker(Empty);
